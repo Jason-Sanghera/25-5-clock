@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Clock</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .break,
+        .session {
+            margin-bottom: 20px;
+        }
+
+        .label {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        .timer {
+            font-size: 48px;
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        .controls button {
+            font-size: 16px;
+            margin: 0 5px;
+        }
+
+        .controls button:first-child {
+            margin-left: 0;
+        }
+
+        .controls button:last-child {
+            margin-right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Pomodoro Clock</h1>
+        <div class="break">
+            <div class="label" id="break-label">Break Length</div>
+            <div class="buttons">
+                <button id="break-decrement" class="button">Down</button>
+                <div class="length" id="break-length">5</div>
+                <button id="break-increment" class="button">Up</button>
+            </div>
+        </div>
+        <div class="session">
+            <div class="label" id="session-label">Session Length</div>
+            <div class="buttons">
+                <button id="session-decrement" class="button">Down</button>
+                <div class="length" id="session-length">25</div>
+                <button id="session-increment" class="button">Up</button>
+            </div>
+        </div>
+        <div class="timer">
+            <div class="label" id="timer-label">Session</div>
+            <div id="time-left">25:00</div>
+        </div>
+        <div class="controls">
+            <button id="start_stop" class="button">Start/Stop</button>
+            <button id="reset" class="button">Reset</button>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+    <script src="bundle.js"></script>
+    <script crossorigin="" src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin="" src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-    fcc/v1/bundle.js"></script>
+
+</body>
+
+</html>
